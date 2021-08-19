@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="card">
+        <img src="assets/user-group-296.png" class="card-image">
+
+        <div class="card-nombre">
+                <p class="card-name">{{persona.user}}</p>
+                <p class="card-surname">{{persona.surname}}</p>
+        </div>
+
+        <div class="grid-container">
+            <div>
+                {{persona.city}}
+            </div>
+            <div>
+                {{persona.birthdate}}
+            </div>
+        </div>
+        
+        <div class="card-correo">
+            <p>{{persona.company_email}}</p>
+            <p>{{persona.personal_email}}</p>
+        </div>
+        
+        <div class="card-botones">
+            <a class="btn" routerLink="/editar/{{persona.id}}">Editar</a>
+            <a class="btn">Borrar</a>
+        </div>
+    </div>
+</div>    

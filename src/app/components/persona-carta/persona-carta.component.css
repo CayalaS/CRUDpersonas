@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;500&display=swap");
+
+.card {
+  background-color: #222831;
+  height: 30rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  margin-right: 3%;
+  padding-top: 2%;
+}
+
+.card-image {
+    height: 80px;
+    width: 80px;
+    margin-top: 20px;
+  }
+
+.card-name {
+  font-size: 1.5em;
+}
+
+.card-surname {
+    text-align: center;
+  }
+
+
+.card-botones {
+ display: flex;
+}
+
+
+.btn {
+  cursor: pointer;
+  font: 700 1.2rem 'Roboto Slab', sans-serif;
+  padding: 0.45em 1em;
+  letter-spacing: 0.05rem;
+  margin: 1em;
+  width: 6rem;
+  background-color: white;
+  color: black;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    font-size: 1.2em;
+  }

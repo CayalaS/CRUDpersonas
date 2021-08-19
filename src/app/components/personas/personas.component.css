@@ -1,0 +1,22 @@
+li {
+    list-style-type: none;
+}
+
+.container {
+    display: flex;
+    /*grid-template-columns: 300px 300px 300px;
+    grid-gap: 50px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;*/
+    font-family: 'Baloo Paaji 2', cursive;
+  }
+
+
+  /*.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    font-size: 1.2em;
+  }*/
+  
