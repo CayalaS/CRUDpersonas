@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Persona } from '../../interfaces/persona.interface';
+import { PersonasService } from 'src/app/services/personas.service';
 
 
 @Component({
@@ -8,6 +9,8 @@ import { Persona } from '../../interfaces/persona.interface';
   styleUrls: ['./persona-carta.component.css']
 })
 export class PersonaCartaComponent implements OnInit {
+
+  classCard = 'card';
 
   @Input() persona: Persona = {
     id: 0,
@@ -20,13 +23,20 @@ export class PersonaCartaComponent implements OnInit {
     birthdate: new Date()
   };
 
-  constructor() { }
+  constructor(private personasService: PersonasService) { }
 
 
 
   ngOnInit(): void {
     console.log("aa")
     console.log(this.persona);
+  }
+
+  borrarPersona() {
+    this.personasService.borrarPersona(this.persona.id)
+    .subscribe();
+    
+    this.classCard = "card-disabled";
   }
 
 }

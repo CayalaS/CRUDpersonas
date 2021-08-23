@@ -38,6 +38,24 @@ export class EditarComponent implements OnInit {
       console.log(persona);
       this.persona = persona;
 
+      });   
+  }
+
+  guardarPersona(): void {
+    console.log(this.persona);
+    this.personasService.actualizarPersona(this.persona, this.persona.id)
+    .subscribe(persona =>{  
+
+      console.log(persona);
+      this.persona = persona;
+
       });
+  }
+
+  borrarPersona() {
+    this.personasService.borrarPersona(this.persona.id)
+    .subscribe();
+
+    this.location.back();
   }
 }

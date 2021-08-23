@@ -1,33 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;500&display=swap");
 
-body{
-	min-width:1000px; 
-    background-color: #8C1111;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-form{margin-top: 2%;
+form{
+    font: 700 1.2rem 'Roboto Slab', sans-serif;
+    margin-top: 2%;
     margin-left: 4%;
     margin-right: 2%;
 }
 
+
 .boton {
-	box-shadow:inset 0px 1px 0px 0px #bbdaf7;
-	background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
-	background-color:#79bbff;
-	border-radius:7px;
-	border:1px solid #84bbf3;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-size:15px;
-	padding:6px 24px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #528ecc;
-}
-.boton:hover {
-	background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
-	background-color:#378de5;
-}
+    
+    cursor: pointer;
+    font: 700 1.2rem 'Roboto Slab', sans-serif;
+    padding: 0.45em 1em;
+    letter-spacing: 0.05rem;
+    margin: 1em;
+    width: 6rem;
+    background-color: white;
+    color: black;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  .boton:hover{
+    background-color: #394555;
+    color: white;
+  }
+
 .boton:active {
 	position:relative;
 	top:1px;
@@ -40,12 +40,14 @@ label{
 
 
 .div-form{
-    background-color: #121040;
+    background-color: #5582bd;
+    border-radius: 5px;
     align-content: center;
     width: 50%;
     margin-left: 25%;
+    margin-top: 5%;
     padding-top: 1%;
-    padding-bottom: 4%;
+    padding-bottom: 2%;
 }
 
 .row{
@@ -55,21 +57,11 @@ label{
     overflow: hidden;
     flex-flow: row wrap;
 }
-    .div-botones{
+    .row-botones{
         display: flex;
         justify-content: center;
-        padding-bottom: 1rem;
-        padding-left: 4rem;
+        padding-left: 3rem;
     }
-
-    .div-titulo{
-        display: flex;
-        justify-content: center;
-        color: white;
-        padding-bottom: 3%;
-    }
-
-
 
     .col-label{
         width: 20%;
@@ -89,7 +81,7 @@ label{
     
         padding: 0.5rem 1.5rem;
         font-size: 1rem;
-        border: 2px solid #F29F80;
+        border: 2px solid #265ba0;
         border-radius: 5px;
         text-align: center;
         outline: transparent;

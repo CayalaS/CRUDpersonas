@@ -8,6 +8,7 @@ import { PersonasComponent } from './components/personas/personas.component';
 import { PersonaCartaComponent } from './components/persona-carta/persona-carta.component';
 import { EditarComponent } from './components/editar/editar.component';
 import { FormsModule } from '@angular/forms';
+import { MenuComponent } from './components/menu/menu.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     PersonasComponent,
     PersonaCartaComponent,
-    EditarComponent
+    EditarComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
