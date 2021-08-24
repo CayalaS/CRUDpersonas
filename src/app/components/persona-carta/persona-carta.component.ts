@@ -28,7 +28,6 @@ export class PersonaCartaComponent implements OnInit {
 
 
   ngOnInit(): void {
-    console.log("aa")
     console.log(this.persona);
   }
 

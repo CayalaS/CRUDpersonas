@@ -50,6 +50,8 @@ export class EditarComponent implements OnInit {
       this.persona = persona;
 
       });
+
+      this.location.back();
   }
 
   borrarPersona() {

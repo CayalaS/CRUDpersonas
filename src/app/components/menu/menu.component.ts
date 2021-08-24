@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter } from '@angular/core';
+import { PersonasService } from 'src/app/services/personas.service';
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  contadorBorrar:String = "";
+
+  constructor(private personasService:PersonasService) { 
+  }
 
   ngOnInit(): void {
+    this.personasService.prueba.subscribe(a => this.contadorBorrar = a);
   }
 
 }

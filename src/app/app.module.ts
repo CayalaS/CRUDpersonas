@@ -9,6 +9,8 @@ import { PersonaCartaComponent } from './components/persona-carta/persona-carta.
 import { EditarComponent } from './components/editar/editar.component';
 import { FormsModule } from '@angular/forms';
 import { MenuComponent } from './components/menu/menu.component';
+import { InicioComponent } from './components/inicio/inicio.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -17,13 +19,15 @@ import { MenuComponent } from './components/menu/menu.component';
     PersonasComponent,
     PersonaCartaComponent,
     EditarComponent,
-    MenuComponent
+    MenuComponent,
+    InicioComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

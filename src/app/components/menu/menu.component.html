@@ -2,8 +2,12 @@
     <div class="dropdown">
       <button class="dropbtn"> <img src="assets/menu.png" class="dropimg"></button>
       <div class="dropdown-content">
-          <a >Menú Principal</a>
+          <a routerLink="/inicio" routerLinkActive="a-active">Menú Principal</a>
         <a routerLink="/lista_persona" routerLinkActive="a-active">Persona</a>
       </div>
+    </div>
+    <div class="contadorBorrar">
+        <p *ngIf="contadorBorrar !== null">Personas borradas: {{contadorBorrar}}</p>
+        <p *ngIf="contadorBorrar == null">Personas borradas: 0</p>
     </div>
   </div>
