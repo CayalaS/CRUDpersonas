@@ -1,7 +1,14 @@
+<div class="divAnadir">
+    <a mat-raised-button routerLink="/anadir" class="botonAnadir">Añadir personas</a>
+</div>
+
 <ul>
     <div class="container">
         <li *ngFor="let persona of personas">
-            <app-persona-carta [persona]="persona"></app-persona-carta>
+            <app-persona-carta 
+            [persona]="persona"
+            (personajeBorrado)="borrarPersona($event)"
+            ></app-persona-carta>
         </li>
     </div>
 </ul>

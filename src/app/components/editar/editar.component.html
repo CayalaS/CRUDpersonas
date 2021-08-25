@@ -1,12 +1,21 @@
 <div class="div-form">
-    <form action="" id="formulario">
+    <form action="" id="formulario" [formGroup]="formPersonas">
 
-        <div class="row">
+        <div class="col-atras">
+            <a routerLink="/lista_persona"><img src="assets/back.png"></a>
+        </div>
+
+        <div class="row row-titulo">
+            <h2 *ngIf="router.url !== '/anadir'">Editar Usuario</h2>
+            <h2 *ngIf="router.url === '/anadir'">Añadir Usuario</h2>
+        </div>
+
+        <div class="row" *ngIf="router.url !== '/anadir'">
             <div class="col col-label">
                 <label for="id">Id:</label>
             </div>
             <div class="col col-input">
-                <input type="number" id="id" class="input input-text" name="id" readonly [(ngModel)]="persona.id">
+                <input type="number" id="id" class="input input-text" name="id" readonly formControlName="id">
             </div>
         </div>
 
@@ -15,7 +24,7 @@
                 <label for="user">Usuario:</label>
             </div>
             <div class="col col-input">
-                <input type="text" id="user" class="input input-text" name="user" [(ngModel)]="persona.user">
+                <input type="text" id="user" class="input input-text" name="user" formControlName="user">
             </div>
         </div>
 
@@ -24,7 +33,7 @@
                 <label for="password">Contraseña:</label>
             </div>
             <div class="col col-input">    
-                <input type="password" id="password" class="input input-text" name="password" [(ngModel)]="persona.password">
+                <input type="password" id="password" class="input input-text" name="password" formControlName="password">
             </div>
         </div>
             
@@ -33,7 +42,7 @@
                 <label for="surname">Nombre:</label>
             </div>
             <div class="col col-input">    
-                <input type="text" id="surname" class="input input-text" name="surname" [(ngModel)]="persona.surname">
+                <input type="text" id="surname" class="input input-text" name="surname" formControlName="surname">
             </div>
         </div>
 
@@ -42,7 +51,7 @@
                 <label for="company_email">Email Compañia:</label>
             </div>
             <div class="col col-input">    
-                <input type="text" id="company_email" class="input input-text" name="company_email" [(ngModel)]="persona.company_email">
+                <input type="text" id="company_email" class="input input-text" name="company_email" formControlName="company_email">
             </div>
         </div>
 
@@ -51,7 +60,7 @@
                 <label for="personal_email">Email Personal:</label>
             </div>
             <div class="col col-input">    
-                <input type="text" id="personal_email" class="input input-text" name="personal_email" [(ngModel)]="persona.personal_email">
+                <input type="text" id="personal_email" class="input input-text" name="personal_email" formControlName="personal_email">
             </div>
         </div>
 
@@ -60,7 +69,7 @@
                 <label for="city">Ciudad:</label>
             </div>
             <div class="col col-input">    
-                <input type="text" id="city" class="input input-text" name="city" [(ngModel)]="persona.city">
+                <input type="text" id="city" class="input input-text" name="city" formControlName="city">
             </div>
         </div>
 
@@ -69,16 +78,25 @@
                 <label for="created_date">Fecha Nacimiento:</label>
             </div>
             <div class="col col-input">    
-                <input type="date" id="created_date" class="input input-text" name="birthdate" [(ngModel)]="persona.birthdate">
+                <input type="date" id="created_date" class="input input-text" name="birthdate" formControlName="birthdate">
             </div>
         </div>
 
-        <div class="row row-botones">
+        <div class="row row-botones" *ngIf="router.url !== '/anadir'">
             <div class="col col-botones">        
                 <a (click)="guardarPersona()" class="boton">Guardar</a>
             </div>
             <div class="col col-botones">    
-                <a (click)="borrarPersona()" class="boton">Borrar</a>
+                <a (click)="openDialog()" class="boton">Borrar</a>
+            </div>
+        </div>
+
+        <div class="row row-botones" *ngIf="router.url === '/anadir'">
+            <div class="col col-botones">        
+                <a (click)="anadirPersona()" class="boton">Añadir</a>
+            </div>
+            <div class="col col-botones">    
+                <a (click)="vaciarFormulario()" class="boton">Vaciar</a>
             </div>
         </div>
 

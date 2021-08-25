@@ -8,3 +8,16 @@ li {
     font-family: 'Baloo Paaji 2', cursive;
   }
   
+  .divAnadir{
+    display: flex;
+    justify-content: center; 
+    padding-top: 1.5%;
+  }
+
+  .botonAnadir{
+      background-color: #265ba0;
+      color: white;
+      padding: 1.5rem 1.5rem;
+      justify-content: center;
+      font-size: 1.5rem;
+  }

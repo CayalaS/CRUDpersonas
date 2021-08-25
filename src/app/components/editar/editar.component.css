@@ -23,10 +23,10 @@ form{
     text-decoration: none;
   }
   
-  .boton:hover{
-    background-color: #394555;
-    color: white;
-  }
+.boton:hover{
+  background-color: #394555;
+  color: white;
+}
 
 .boton:active {
 	position:relative;
@@ -46,7 +46,7 @@ label{
     width: 50%;
     margin-left: 25%;
     margin-top: 5%;
-    padding-top: 1%;
+    padding-top: 0.2%;
     padding-bottom: 2%;
 }
 
@@ -57,24 +57,32 @@ label{
     overflow: hidden;
     flex-flow: row wrap;
 }
-    .row-botones{
-        display: flex;
-        justify-content: center;
-        padding-left: 3rem;
-    }
+.row-botones{
+    display: flex;
+    justify-content: center;
+    padding-left: 3rem;
+}
 
-    .col-label{
-        width: 20%;
-    }
+.row-titulo{
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding-bottom: 5%;
+    margin-left: 3rem;
+}
 
-    .col-input{
-        width: 70%;
-    }
+.col-label{
+    width: 20%;
+}
 
-    .col-botones{
-        padding-top: 1rem;
-        margin: 2px;
-    }
+.col-input{
+    width: 70%;
+}
+
+.col-botones{
+    padding-top: 1rem;
+    margin: 2px;
+}
 
 
 .input{
@@ -86,8 +94,12 @@ label{
         text-align: center;
         outline: transparent;
 }
-    .input-text{
+
+.input-text{
         width: 100%;
-    }
+}
 
-
+.col-atras{
+    justify-content: center;
+    float: left;
+}

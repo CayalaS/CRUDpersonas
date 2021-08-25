@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/lista_persona', pathMatch: 'full' },
   { path: 'lista_persona', component: PersonasComponent },
   { path: 'editar/:id', component: EditarComponent },
+  { path: 'anadir', component: EditarComponent },
   { path: 'inicio', component: InicioComponent },
 ];
 

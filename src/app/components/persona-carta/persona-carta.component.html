@@ -1,5 +1,5 @@
 
-    <div class="card" [ngClass]="classCard">
+    <div class="card">  <!--[ngClass]="classCard" -->
         <img src="assets/user-group-296.png" class="card-image">
 
         <div class="card-nombre">
@@ -23,7 +23,7 @@
         
         <div class="card-botones">
             <a class="btn" routerLink="/editar/{{persona.id}}">Editar</a>
-            <a class="btn" (click)="borrarPersona()">Borrar</a>
+            <a class="btn" (click)="openDialog()">Borrar</a>
         </div>
     </div>
  

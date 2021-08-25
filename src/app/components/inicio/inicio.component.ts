@@ -11,9 +11,7 @@ export class InicioComponent implements OnInit {
   constructor(private personasService:PersonasService) { }
 
   ngOnInit(): void {
-
-    this.personasService.emitirContador();
-
+    
   }
 
 }

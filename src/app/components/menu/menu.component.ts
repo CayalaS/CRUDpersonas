@@ -14,6 +14,7 @@ export class MenuComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.contadorBorrar = localStorage.getItem('contador') == null ? "0" : localStorage.getItem('contador')!;
     this.personasService.prueba.subscribe(a => this.contadorBorrar = a);
   }
 

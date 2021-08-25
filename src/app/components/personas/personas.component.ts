@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PersonasService } from 'src/app/services/personas.service';
 import { BrowserModule } from '@angular/platform-browser';
+import { Persona } from '../../interfaces/persona.interface';
 
 @Component({
   selector: 'app-personas',
@@ -23,6 +24,10 @@ export class PersonasComponent implements OnInit {
 
         })
 
+  }
+
+  borrarPersona(persona: Persona){
+    this.personas = this.personas.filter(function(aa: Persona) {return aa.id !== persona.id});
   }
 
 }
